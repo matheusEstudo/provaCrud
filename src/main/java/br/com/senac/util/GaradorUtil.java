@@ -54,7 +54,7 @@ public class GaradorUtil {
     public static Double gerarPeso() {
         return Double.parseDouble(R.nextInt(90) + "." + R.nextInt(10));
     }
-    
+
     public static Boolean gerarTeinado() {
         List<Boolean> teinados = new ArrayList<>();
         teinados.add(true);
@@ -64,10 +64,8 @@ public class GaradorUtil {
         return teinados.get(0);
     }
 
-    
     public static void main(String[] args) {
 
-        System.out.println(gerarPeso());
     }
 
 }

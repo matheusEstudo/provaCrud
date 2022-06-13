@@ -21,4 +21,10 @@ public class CachorroDaoImpl extends BaseDaoImpl<Cachorro, Long> implements Cach
         return consulta.getResultList();
     }
 
+    @Override
+    public List<Cachorro> todosTreinado(Session session) {
+        Query<Cachorro> consulta = session.createQuery("from Cachorro c where c.treinamento = TRUE");
+        return consulta.getResultList();
+    }
+
 }

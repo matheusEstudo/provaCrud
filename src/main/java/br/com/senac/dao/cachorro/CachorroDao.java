@@ -9,4 +9,6 @@ public interface CachorroDao extends BaseDao<Cachorro, Long> {
 
     List<Cachorro> pesquisarPorNome(String nome, Session session);
 
+    List<Cachorro> todosTreinado(Session session);
+
 }

@@ -22,11 +22,13 @@ public class ComportamentoDaoImplTest {
 
 //    @Test
     public void testSalvar() {
+
         session = HibernateUtil.abrirConexao();
         comportamento = gerarComportamento();
         comportamentoDao.salvarOuAlterar(comportamento, session);
         session.close();
         assertNotNull(comportamento.getId());
+
     }
 
 //    @Test

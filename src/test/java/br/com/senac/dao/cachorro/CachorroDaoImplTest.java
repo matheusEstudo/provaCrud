@@ -27,9 +27,10 @@ public class CachorroDaoImplTest {
         cdit = new ComportamentoDaoImplTest();
     }
 
-//    @Test
+    @Test
     public void testSalvar() {
         System.out.println("salvar");
+
         Date data = new Date();
         Comportamento comportamento = cdit.buscarbd();
         cachorro = new Cachorro(gerarTeinado(),
@@ -86,7 +87,22 @@ public class CachorroDaoImplTest {
         session.close();
 
         for (Cachorro cachorroList : cachorros) {
-            System.out.println(cachorroList.getNome());
+            System.out.println("nome: " + cachorroList.getNome()
+                    + "\ntipo comportamento: " + cachorroList.getComportamento().getTipo());
+        }
+
+    }
+
+//    @Test
+    public void testTodosTreinado() {
+        System.out.println("todos treinado");
+        session = HibernateUtil.abrirConexao();
+        List<Cachorro> cachorros = cachorroDao.todosTreinado(session);
+        session.close();
+
+        for (Cachorro cachorroList : cachorros) {
+            System.out.println("nome: " + cachorroList.getNome()
+                    + "\n treinamento " + cachorroList.getTreinamento());
         }
 
     }
