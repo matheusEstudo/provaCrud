@@ -5,6 +5,7 @@ import br.com.senac.entidade.Comportamento;
 import org.hibernate.Session;
 import org.junit.Test;
 import static br.com.senac.util.GaradorUtil.*;
+import com.github.javafaker.Faker;
 import java.util.Collections;
 import java.util.List;
 import org.hibernate.query.Query;
@@ -15,6 +16,7 @@ public class ComportamentoDaoImplTest {
     private Comportamento comportamento;
     private final ComportamentoDao comportamentoDao;
     private Session session;
+    private static final Faker FAKER = new Faker();
 
     public ComportamentoDaoImplTest() {
         comportamentoDao = new ComportamentoDaoImpl();
@@ -24,7 +26,9 @@ public class ComportamentoDaoImplTest {
     public void testSalvar() {
 
         session = HibernateUtil.abrirConexao();
-        comportamento = gerarComportamento();
+//        comportamento = new Comportamento("medroso", FAKER.lorem().sentence(), false);
+//        comportamento = new Comportamento("agressivo", FAKER.lorem().sentence(), false);
+        comportamento = new Comportamento("normal", FAKER.lorem().sentence(), false);
         comportamentoDao.salvarOuAlterar(comportamento, session);
         session.close();
         assertNotNull(comportamento.getId());

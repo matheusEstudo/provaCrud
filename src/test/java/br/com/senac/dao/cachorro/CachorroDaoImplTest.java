@@ -33,7 +33,7 @@ public class CachorroDaoImplTest {
 
         Date data = new Date();
         Comportamento comportamento = cdit.buscarbd();
-        cachorro = new Cachorro(gerarTeinado(),
+        cachorro = new Cachorro(gerarBooleano(),
                 gerarNome(),
                 data,
                 gerarPeso(),
@@ -44,7 +44,6 @@ public class CachorroDaoImplTest {
         cachorroDao.salvarOuAlterar(cachorro, session);
         session.close();
         assertNotNull(cachorro.getId());
-
     }
 
 //    @Test

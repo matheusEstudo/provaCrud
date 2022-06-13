@@ -12,21 +12,6 @@ public class GaradorUtil {
     private static final Faker FAKER = new Faker();
     private static final Random R = new Random();
 
-    public static Comportamento gerarComportamento() {
-
-        List<String> tipos = new ArrayList<>();
-        tipos.add("raivoso");
-        tipos.add("carinhoso");
-        tipos.add("nervoso");
-        tipos.add("tristinho");
-        tipos.add("dorminhoco");
-        tipos.add("hiperativo");
-        tipos.add("sonhador");
-
-        Collections.shuffle(tipos);
-        return new Comportamento(tipos.get(0), FAKER.lorem().sentence(), false);
-    }
-
     public static String gerarNome() {
         List<String> nomes = new ArrayList<>();
         nomes.add("luke");
@@ -55,7 +40,7 @@ public class GaradorUtil {
         return Double.parseDouble(R.nextInt(90) + "." + R.nextInt(10));
     }
 
-    public static Boolean gerarTeinado() {
+    public static Boolean gerarBooleano() {
         List<Boolean> teinados = new ArrayList<>();
         teinados.add(true);
         teinados.add(false);
