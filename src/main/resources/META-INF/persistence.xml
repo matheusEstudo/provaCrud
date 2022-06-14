@@ -6,7 +6,7 @@
     <class>br.com.senac.entidade.Cachorro</class>
     <class>br.com.senac.entidade.Comportamento</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/petsShopDb?useTimezone=true&amp;serverTimezone=America/Sao_Paulo&amp;zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/petsShopMatheus?useTimezone=true&amp;serverTimezone=America/Sao_Paulo&amp;zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="root"/>
       <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
       <property name="javax.persistence.jdbc.password" value="Anakim-3242"/>
